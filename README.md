@@ -4,4 +4,4 @@
 The Backend code should be in .net c# core 9, dapper and stored procedure and front end should be Angular and AG Grid
 
 
-key: "AIzaSyCFUh8Ul-o2waKzCKtNFeGx7KRNCp3bF38"
+key: AIzaSyCHOHwXCqAArAM2gwwC9AftCb5a3Zv5kKk"
