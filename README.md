@@ -1,6 +1,6 @@
 # AuditAccountsAnalytics API
 
-**Endpoint:** `POST /api/AuditAccountsAnalytics/Analyze`  
+**Endpoint:** `POST /api/ERP/AuditAccounts/Analytics`  
 **Content-Type:** `multipart/form-data`  
 **Auth:** None required (`[AllowAnonymous]`)
 
