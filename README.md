@@ -1,11 +1,17 @@
-curl ^"http://183.82.6.147:4622/ERP/AuditAccounts/Analytics/AnalyzeTrialBalance?analysisType=1^" ^
-  -H ^"Accept: application/json, text/plain, */*^" ^
-  -H ^"Accept-Language: en-US,en;q=0.9^" ^
-  -H ^"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI4NiIsIlVzZXJHcm91cElkIjoiMSIsIkNvbXBhbnlJZCI6IjEiLCJGaW5hbmNpYWxZZWFySWQiOiI5NCIsIkFwcGxpY2F0aW9uSWQiOiIxIiwiSXNTdXBlclVzZXIiOiJUcnVlIiwiU2Vzc2lvbklkIjoiU2Vzc2lvbl83ZDgzZTZhZi1kYjdkLTQ5MDAtOThlZS03NWFjZTRmOGI1YmEiLCJGaW5ZZWFyU3RhcnREYXRlIjoiMy8xLzIwMjYgMTI6MDA6MDAgQU0iLCJGaW5ZZWFyRW5kRGF0ZSI6IjIvMjgvMjAyNyAxMjowMDowMCBBTSIsInBheXJvbGxNb250aElkIjoiMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzczMzc0NjQxLCJpc3MiOiJodHRwOi8vMTAzLjE5NS4yNDYuMjQ2OjgwMTMvIiwiYXVkIjoiaHR0cDovLzEwMy4xOTUuMjQ2LjI0Njo4MDE0LyJ9.XJFByD55c9GAJH2__jj4sGgEWRV06cACMnEMtr-3ASc^" ^
-  -H ^"Connection: keep-alive^" ^
-  -H ^"Content-Type: application/json^" ^
-  -H ^"Origin: http://localhost:4200^" ^
-  -H ^"Referer: http://localhost:4200/^" ^
-  -H ^"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36^" ^
-  --data-raw ^"^{^\^"companyId^\^":1,^\^"financialYearID^\^":^[3,34,50^],^\^"fromDate^\^":^\^"2021-03-01^\^",^\^"toDate^\^":^\^"2024-02-29^\^",^\^"reportType^\^":^\^"TB^\^",^\^"projectionParams^\^":^{^\^"projectionYears^\^":10,^\^"loanAmount^\^":3,^\^"repaymentPeriod^\^":5,^\^"interestPeriod^\^":10^}^}^" ^
-  --insecure
+{
+    "companyId": 1,
+    "financialYearID": [
+        3,
+        62,
+        75
+    ],
+    "fromDate": "2021-03-01",
+    "toDate": "2026-02-28",
+    "reportType": "TB",
+    "projectionParams": {
+        "projectionYears": 3,
+        "loanAmount": 5000,
+        "repaymentPeriod": 12,
+        "interestRate": 1
+    }
+}
