@@ -1,18 +1,7 @@
-POST /ERP/AuditAccounts/Analytics/Analyze
-     ↓ responseType: 'blob'
-Blob (binary .xlsx)
-     ↓ blob.arrayBuffer()
-ArrayBuffer
-     ↓ XLSX.read(buffer, { type: 'array' })
-WorkBook
-     ↓ workbook.SheetNames  →  ['Financial Statements', 'Disclosures', ...]
-     ↓ XLSX.utils.sheet_to_json(sheet, { header: 1 })
-Array of rows per sheet
-     ↓
-Angular tabs (one per sheet name) + grid/table per tab
-
-curl -X POST "https://your-host/ERP/AuditAccounts/Analytics/AnalyzeTrialBalance?analysisType=0" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_TOKEN" \
-  -d '{"companyId":1,"financialYearID":5,"fromDate":"2024-04-01","toDate":"2025-03-31","reportType":"TB"}' \
-  --output result.xlsx
+curl ^"http://183.82.6.147:4622/ERP/AuditAccounts/Analytics/AnalyzeTrialBalance?analysisType=1^" ^
+  -H ^"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI4NiIsIlVzZXJHcm91cElkIjoiMSIsIkNvbXBhbnlJZCI6IjEiLCJGaW5hbmNpYWxZZWFySWQiOiI5NCIsIkFwcGxpY2F0aW9uSWQiOiIxIiwiSXNTdXBlclVzZXIiOiJUcnVlIiwiU2Vzc2lvbklkIjoiU2Vzc2lvbl83ZDgzZTZhZi1kYjdkLTQ5MDAtOThlZS03NWFjZTRmOGI1YmEiLCJGaW5ZZWFyU3RhcnREYXRlIjoiMy8xLzIwMjYgMTI6MDA6MDAgQU0iLCJGaW5ZZWFyRW5kRGF0ZSI6IjIvMjgvMjAyNyAxMjowMDowMCBBTSIsInBheXJvbGxNb250aElkIjoiMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzczMzc0NjQxLCJpc3MiOiJodHRwOi8vMTAzLjE5NS4yNDYuMjQ2OjgwMTMvIiwiYXVkIjoiaHR0cDovLzEwMy4xOTUuMjQ2LjI0Njo4MDE0LyJ9.XJFByD55c9GAJH2__jj4sGgEWRV06cACMnEMtr-3ASc^" ^
+  -H ^"Referer: http://localhost:4200/^" ^
+  -H ^"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36^" ^
+  -H ^"Accept: application/json, text/plain, */*^" ^
+  -H ^"Content-Type: application/json^" ^
+  --data-raw ^"^{^\^"companyId^\^":1,^\^"financialYearID^\^":3,^\^"fromDate^\^":^\^"2021-03-01^\^",^\^"toDate^\^":^\^"2022-02-28^\^",^\^"reportType^\^":^\^"TB^\^",^\^"projectionParams^\^":^{^\^"projectionYears^\^":10,^\^"loanAmount^\^":2222,^\^"repaymentPeriod^\^":12,^\^"interestPeriod^\^":122^}^}^"
